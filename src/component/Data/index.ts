@@ -111,29 +111,27 @@ export const productCard: IProduct[] = [
 ];
 export const formInput: IInput[] =[
   {
-  id: "title",
-  name: "title", 
-  label: "product Title ",
-  type :"text"
-    
+    id: "title",
+    name: "title",
+    label: "Product Title",
+    type: "text",
   },
-    {
-  id: "title",
-  name: "title", 
-  label: "product Title ",
-  type :"text"
-    
-  },  {
-  id: "title",
-  name: "title", 
-  label: "product Title ",
-  type :"text"
-    
-  },  {
-  id: "title",
-  name: "title", 
-  label: "product Title ",
-  type :"text"
-    
-  }
+  {
+    id: "description",
+    name: "description",
+    label: "Product Description",
+    type: "text",
+  },
+  {
+    id: "image",
+    name: "ImageUrl",
+    label: "Product Image URL",
+    type: "text",
+  },
+  {
+    id: "price",
+    name: "price",
+    label: "Product Price",
+    type: "text",
+  },
 ]

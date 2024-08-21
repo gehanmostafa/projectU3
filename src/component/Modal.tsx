@@ -1,5 +1,5 @@
-import { Button, Dialog, DialogPanel, DialogTitle } from "@headlessui/react";
-import { Children, ReactNode, useState } from "react";
+import {  Dialog, DialogPanel, DialogTitle } from "@headlessui/react";
+import { ReactNode } from "react";
 
 interface IProp {
   title: string;

@@ -1,6 +1,6 @@
 export interface IProduct 
   {
-      id: number;
+      id?: number;
     ImageUrl: string;
     title: string;
     colors: string[];
@@ -14,7 +14,7 @@ export interface IProduct
 export interface IInput
    {
   id: string,
-  name: string, 
+  name:    "title" | "ImageUrl"|"description"|"price"
   label: string,
   type :string
     

@@ -1,3 +1,5 @@
+import CircleColor from "./CircleColor";
+
 import Image from "./Image";
 import Button from "./UI/Button";
 import { maxTxt } from "./Utiles/functions";
@@ -6,17 +8,21 @@ interface IProps {
   product: IProduct;
 }
 const Card = ({ product }: IProps) => {
+
   const { ImageUrl, title, colors, description, price, category } = product;
+    const renderColorsCard = colors.map((color) => (
+    <CircleColor
+      color={color}
+      key={color}
+    />
+  ));
   return (
     <div className="flex flex-col w-fit justify-between  border p-2 rounded-md mx-auto ">
       <Image ImgURL={ImageUrl} alt="product1" className="w-full rounded-md  h-[50%]" />
       <h3>{title}</h3>
-      <div className="flex ">
-        <span className={`${colors[0]} w-5 h-5 rounded-full`}> </span>
-        <span className={`${colors[1]} w-5 h-5 rounded-full`}> </span>
-        <span className={`${colors[2]} w-5 h-5 rounded-full`}> </span>
-        <span className={`${colors[0]} w-5 h-5 rounded-full`}> </span>
-      </div>
+         <div className="flex ">
+        {renderColorsCard}
+              </div>
       <div>{maxTxt(description)}</div>
       <div className="flex justify-between">
         <div>{price}</div>

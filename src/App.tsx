@@ -1,6 +1,6 @@
 import "./App.css";
 import Card from "./component/Card";
-import { formInput, productCard } from "./component/Data/index.ts";
+import { Colors, formInput, productCard } from "./component/Data/index.ts";
 import Modal from "./component/Modal.tsx";
 import { ChangeEvent, FormEvent, useState } from "react";
 import Button from "./component/UI/Button.tsx";
@@ -8,23 +8,24 @@ import { Input } from "@headlessui/react";
 import { IProduct } from "./component/interfaces";
 import { productValidation } from "./validation/index.ts";
 import ErrorMessage from "./component/ErrorMessage/index.tsx";
-
+import CircleColor from "./component/CircleColor.tsx";
 
 function App() {
   /*____________________Render_card____________*/
-  const productList = productCard.map((product) => (
+  const [product , setProduct ] = useState(productCard)
+  const productList = product.map((product) => (
     <Card key={product.id} product={product} />
   ));
- 
+
   /*___________Modal && Errors ____________*/
 
   const [isOpen, setIsOpen] = useState(false);
   const [errors, setErrors] = useState({
-        title: "",
+    title: "",
     description: "",
     ImageUrl: "",
-    price: ""
-  })
+    price: "",
+  });
 
   function open() {
     setIsOpen(true);
@@ -37,13 +38,13 @@ function App() {
     event.preventDefault();
     const { title, price, ImageUrl, description } = createUpDateProduct;
     const errors = productValidation({
-      //  title :title // store message error 
+      //  title :title // store message error
       title,
       price,
       ImageUrl,
-        description,
-      });
-    //submit  has Error (true) =>if all key empity  
+      description,
+    });
+    //submit  has Error (true) =>if all key empity
     const hasErrorMsg =
       Object.values(errors).some((value) => value === "") &&
       Object.values(errors).every((value) => value === "");
@@ -51,9 +52,12 @@ function App() {
       //store errors and send to component Error
       setErrors(errors);
       return;
-    
     } else {
-      console.log("true")
+      //add Data into productList
+      setProduct((prev) => [...prev, { ...createUpDateProduct, id: productList.length, colors: tempcolor }])
+      setCreateUpDateProduct(defaultProduct);
+      setTempcolor([]);
+      close()
     }
   };
 
@@ -62,7 +66,28 @@ function App() {
     setCreateUpDateProduct(defaultProduct);
     console.log("cencel");
   }
- /*____________________Render_FormInput____________*/
+  /*____________________Render_Colors____________*/
+  const [tempcolor, setTempcolor] = useState<string[]>([]);
+
+  const renderColors = Colors.map((color) => (
+    <CircleColor
+      color={color}
+      key={color}
+      onClick={() => {
+        if (tempcolor.includes(color)) {
+             setTempcolor(
+          // prev[all colors]
+          (prev) => prev.filter((item) => item !== color)
+        );
+          return;
+        }
+        setTempcolor((prev) => [...prev, color]);
+     
+      }}
+    />
+  ));
+  console.log(tempcolor);
+  /*____________________Render_FormInput____________*/
   const defaultProduct = {
     title: "",
     description: "",
@@ -87,11 +112,11 @@ function App() {
     //The first time User writes the error, it goes
     setErrors({
       ...errors, //all  message  and add  update message
-      [name]: ""  
-    })
+      [name]: "",
+    });
   };
   const renderformInput = formInput.map((input) => (
-    <div className={`flex flex-col ${input.id} `}>
+    <div className={`flex flex-col `} key={input.id}>
       <label htmlFor={input.id}>{input.label}</label>
       <Input
         title={input.name}
@@ -114,6 +139,16 @@ function App() {
         <form onSubmit={submitHandler}>
           <div className="space-y-3">
             {renderformInput}
+            <div className="flex ">
+              {renderColors}
+              <div className="flex ">
+                {tempcolor.map((color) => (
+                  <span key={color} style={{ backgroundColor: `${color}` }}>
+                    {color}
+                  </span>
+                ))}
+              </div>
+            </div>
             <div className="flex justify-between gap-2 w-full">
               <Button className="border px-3 py-1  bg-red-700 ">Submit</Button>
               <Button

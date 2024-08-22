@@ -3,9 +3,12 @@ export const productCard: IProduct[] = [
   {
     id: 1,
     ImageUrl:
-      "../../../public/images/1659340658bf5261b18ff5c0757fd3ed8b0733611c.webp",
+      "../../../public/images/1706262471ad5e0aab717bf34adc3b81d2bbd4e128.webp",
     title: "Shaggy Plain Duvet Cover Set ",
-    colors: [
+  
+    description:
+  "Shaggy Plain Duvet Cover Set Without Filler, Plush Bedding Set, SMatching Pillowcase",
+        colors: [
       "#A31ACB",
       "#FF6E31",
       "#3C2A21",
@@ -15,11 +18,9 @@ export const productCard: IProduct[] = [
 
       "#84D2C5",
     ],
-    description:
-      "Shaggy Plain Duvet Cover Set Without Filler, Plush Bedding Set, Super Soft Shaggy Blanket Cover and Matching Pillowcase",
     price: "50000",
     category: {
-      name: "bii",
+      name: "",
       imageURL:
         "../../../public/images/1659340658bf5261b18ff5c0757fd3ed8b0733611c.webp",
     },
@@ -43,7 +44,7 @@ export const productCard: IProduct[] = [
   {
     id: 3,
     ImageUrl:
-      "../../../public/images/1659340658bf5261b18ff5c0757fd3ed8b0733611c.webp",
+      "../../../public/images//bg_4859512_100380_a.webp",
     title: "Shaggy Plain Duvet Cover Set ",
     colors: [
       "#FF6E31",
@@ -66,7 +67,7 @@ export const productCard: IProduct[] = [
   {
     id: 4,
     ImageUrl:
-      "../../../public/images/1659340658bf5261b18ff5c0757fd3ed8b0733611c.webp",
+      "../../../public/images//17165151099d6c0fb631a4d7fb5b47a34327cf9883.webp",
     title: "Shaggy Plain Duvet Cover Set ",
     colors: [
       "#CB1C8D",
@@ -83,13 +84,13 @@ export const productCard: IProduct[] = [
     category: {
       name: "bii",
       imageURL:
-        "../../../public/images/1659340658bf5261b18ff5c0757fd3ed8b0733611c.webp",
+        "../../../public/images/17165151099d6c0fb631a4d7fb5b47a34327cf9883.webp",
     },
   },
   {
     id: 5,
     ImageUrl:
-      "../../../public/images/1659340658bf5261b18ff5c0757fd3ed8b0733611c.webp",
+      "../../../public/images/1723886713e170d9f93ff479b3dbc59a5658c1b312.webp",
     title: "Shaggy Plain Duvet Cover Set ",
     colors: [
       "#FF6E31",
@@ -106,40 +107,40 @@ export const productCard: IProduct[] = [
       "Shaggy Plain Duvet Cover Set Without Filler, Plush Bedding Set, Super Soft Shaggy Blanket Cover and Matching Pillowcase",
     price: "50000",
     category: {
-      name: "bii",
+      name: "b",
       imageURL:
-        "../../../public/images/1659340658bf5261b18ff5c0757fd3ed8b0733611c.webp",
+        "../../../public/images/1723886713e170d9f93ff479b3dbc59a5658c1b312.webp",
     },
   },
 
   {
     id: 6,
     ImageUrl:
-      "../../../public/images/1659340658bf5261b18ff5c0757fd3ed8b0733611c.webp",
+      "../../../public/images/1721204092fdf199e9359debf538c766f19a093a1e.webp",
     title: "Shaggy Plain Duvet Cover Set ",
     colors: ["#A31ACB", "#3C2A21", "#1F8A70", "#820000", "#FF0032"],
     description:
       "Shaggy Plain Duvet Cover Set Without Filler, Plush Bedding Set, Super Soft Shaggy Blanket Cover and Matching Pillowcase",
     price: "50000",
     category: {
-      name: "bii",
+      name: "closes",
       imageURL:
-        "../../../public/images/1659340658bf5261b18ff5c0757fd3ed8b0733611c.webp",
+        "../../../public/images/1721204092fdf199e9359debf538c766f19a093a1e.webp",
     },
   },
   {
     id: 7,
     ImageUrl:
-      "../../../public/images/1659340658bf5261b18ff5c0757fd3ed8b0733611c.webp",
+      "../../../public/images/1719035805400fec5f1b863a10f2f4f60d060dde0e.webp",
     title: "Shaggy Plain Duvet Cover Set ",
     colors: ["#FF0032", "#2563eb", "#FF6E31"],
     description:
       "Shaggy Plain Duvet Cover Set Without Filler, Plush Bedding Set, Super Soft Shaggy Blanket Cover and Matching Pillowcase",
     price: "50000",
     category: {
-      name: "bii",
+      name: "B",
       imageURL:
-        "../../../public/images/1659340658bf5261b18ff5c0757fd3ed8b0733611c.webp",
+        "../../../public/images//172420583169e573cac0d6b2a9fd5c4ae0ecd396d2.webp",
     },
   },
 ];

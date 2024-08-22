@@ -7,18 +7,21 @@ export const productValidation = (product: {
   title:string,
     description:string,
     ImageUrl:string,
-    price:string,
+  price: string,
+
 }) => {
   const errors: {
     title:string,
     description:string,
     ImageUrl:string,
-    price:string,
+    price: string,
+ 
   } = {
     title: "",
     description: "",
     ImageUrl: "",
     price: "",
+ 
     };
      
   if (
@@ -44,6 +47,7 @@ export const productValidation = (product: {
     // طب لو false ابعت رساله 
     if (!product.price.trim() || isNaN(Number(product.price))) {
          errors.price = "Valid price is required!";
-    }
+  }
+
   return errors;
 };

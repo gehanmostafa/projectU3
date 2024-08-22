@@ -7,6 +7,6 @@
  * @param {number} [maxTxt=30] - The maximum allowed length of the text before truncating. Defaults to 30.
  * @returns {string} The truncated text if longer than the maximum length, otherwise the full text.
  */
-export function maxTxt(txt: string, maxTxt: number = 30): string {
+export function maxTxt(txt: string, maxTxt: number = 50): string {
     return txt.length > maxTxt ? `${ txt.slice(0, maxTxt) } ...`: txt;
 }

@@ -6,7 +6,7 @@ interface IColor extends DetailedHTMLProps<HTMLAttributes<HTMLSpanElement>, HTML
  }
 const CircleColor = ({color , ...rest} :IColor) => {
     return (
-        <span className={`inline-block w-5 h-5 rounded-full`} style={{ backgroundColor: color}}  {...rest} />
+        <span className={`inline-block w-5 h-5 rounded-full cursor-pointer mb-3 `} style={{  backgroundColor: color }}  {...rest} />
     );
 }
 

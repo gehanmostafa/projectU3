@@ -20,3 +20,15 @@ export interface IInput
     
   
 }
+export interface ICategory{
+  id: number, 
+  imageURL: string,
+  name:string
+}
+export interface ICategory {
+   id: number
+    name: string;
+    imageURL: string;
+}
+ export type ProductNameTypes ="title" | "ImageUrl"|"description"|"price"
+  

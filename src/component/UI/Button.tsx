@@ -10,7 +10,7 @@ interface IBut extends ButtonHTMLAttributes<HTMLButtonElement>{
 function Button({className, children,width="w-fit" , ...rest} :IBut  ) {
   return (
       <div>
-          <button className={` ${className}  ${width} `}{...rest} >
+          <button className={` rounded-lg text-white px-5 py-2 duration-200 font-medium transition-all delay-75  active:scale-[0.9]  ${className}  ${width} `}{...rest} >
               {children}
           </button>
       
